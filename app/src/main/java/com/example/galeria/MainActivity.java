@@ -11,8 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     LinearLayout simpleGallery;
     ImageView selectedImageView;
-    int[] images = {R.drawable.i1, R.drawable.i2, R.drawable.i3, R.drawable.i4,
-            R.drawable.i5, R.drawable.i6};
+    int[] images = {R.drawable.kot1, R.drawable.kot2, R.drawable.kot3, R.drawable.kot4,};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

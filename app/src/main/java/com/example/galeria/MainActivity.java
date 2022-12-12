@@ -105,21 +105,19 @@ public class MainActivity extends AppCompatActivity {
                 {
                     ImageView.setBackgroundResource(R.drawable.kot1);
                 }
-                else if(id==2)
+                if(id==2)
                 {
                     ImageView.setBackgroundResource(R.drawable.kot2);
                 }
-                else if(id==3)
+                if(id==3)
                 {
                     ImageView.setBackgroundResource(R.drawable.kot3);
                 }
-                else if(id==4)
+                 if(id==4)
                 {
                     ImageView.setBackgroundResource(R.drawable.kot4);
                 }
-                else{
 
-                }
             }
 
             @Override

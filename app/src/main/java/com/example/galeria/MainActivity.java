@@ -5,6 +5,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -38,40 +40,63 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(a==1) {
                     ImageView.setBackgroundResource(R.drawable.kot2);
-                    a=2;
+
                 }
                 else if(a==2) {
                     ImageView.setBackgroundResource(R.drawable.kot3);
-                    a=3;
+
                 }
                 if(a==3) {
                     ImageView.setBackgroundResource(R.drawable.kot4);
-                    a=4;
+
                 }
                 if(a==4) {
                     ImageView.setBackgroundResource(R.drawable.kot1);
-                    a=1;
+
+                }
+                a++;
+                if(a>4)
+                {
+                    a=a-4;
                 }
             }
         });
-        /*
-        int id=Integer.parseInt(kotid.getText().toString());
-        if(id==1)
-        {
-            ImageView.setBackgroundResource(R.drawable.kot1);
-        }
-        if(id==2)
-        {
-            ImageView.setBackgroundResource(R.drawable.kot2);
-        }
-        if(id==3)
-        {
-            ImageView.setBackgroundResource(R.drawable.kot3);
-        }
-        if(id==4)
-        {
-            ImageView.setBackgroundResource(R.drawable.kot4);
-        }*/
+        TextWatcher textWatcher = new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                int id=Integer.parseInt(kotid.getText().toString());
+                if(id==1)
+                {
+                    ImageView.setBackgroundResource(R.drawable.kot1);
+                }
+                else if(id==2)
+                {
+                    ImageView.setBackgroundResource(R.drawable.kot2);
+                }
+                else if(id==3)
+                {
+                    ImageView.setBackgroundResource(R.drawable.kot3);
+                }
+                else if(id==4)
+                {
+                    ImageView.setBackgroundResource(R.drawable.kot4);
+                }
+                else{
+
+                }
+            }
+        };
+        kotid.addTextChangedListener(textWatcher);
         prev=findViewById(R.id.prev);
         prev.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,19 +104,20 @@ public class MainActivity extends AppCompatActivity {
 
                 if(a==1) {
                     ImageView.setBackgroundResource(R.drawable.kot4);
-                    a=4;
                 }
                 else if(a==2) {
                     ImageView.setBackgroundResource(R.drawable.kot1);
-                    a=1;
                 }
                 if(a==3) {
                     ImageView.setBackgroundResource(R.drawable.kot2);
-                    a=2;
                 }
                 if(a==4) {
                     ImageView.setBackgroundResource(R.drawable.kot3);
-                    a=3;
+                }
+                a--;
+                if(a<1)
+                {
+                    a=a+4;
                 }
             }
         });

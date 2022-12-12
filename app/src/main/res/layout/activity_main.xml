@@ -11,13 +11,14 @@
 
     <ImageView
         android:id="@+id/ImageView"
-        android:layout_width="410dp"
+        android:layout_width="386dp"
         android:layout_height="241dp"
+        android:layout_marginStart="12dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/galeria"
+        app:layout_constraintVertical_bias="0.017" />
 
     <Button
         android:id="@+id/prev"
@@ -85,9 +86,10 @@
         app:layout_constraintVertical_bias="0.669" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="411dp"
-        android:layout_height="27dp"
+        android:id="@+id/autor"
+        android:layout_width="602dp"
+        android:layout_height="32dp"
+        android:background="#015304"
         android:text="Autor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,5 +97,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/galeria"
+        android:layout_width="670dp"
+        android:layout_height="39dp"
+        android:background="#015304"
+        android:text="Galeria"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
